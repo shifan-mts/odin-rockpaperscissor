@@ -10,48 +10,54 @@ return a[k];
 }
 
 function gethumanchoice(){
-    b = prompt("enter your choice:");
+    b = document.querySelector('input').value;
     return b.toLowerCase();
 }
 
 function playround(computerchoice,humanchoice){
+    let p1 = document.querySelector(".result");
+ 
+let p2 = document.querySelector(".winner");
+
     if(computerchoice == humanchoice){
-        console.log("Draw");
+        p1.textContent = "Draw";
         return ;
     }
 else if(computerchoice == "rock"){
     if(humanchoice == "scissor"){
         com+=1;
-    console.log("Rock beats Scissors");}
+    p1.textContent = "Rock beats Scissors";}
     else{
     hu+=1;
-    console.log("Paper beats Rock");}
+    p1.textContent = "Paper beats Rock";}
 
 }
 else if(computerchoice == "paper"){
     if(humanchoice=="rock"){
         com+=1;
-        console.log("Paper beats Rock!");}
+        p1.textContent = "Paper beats Rock!";}
     else{
     hu+=1;
-    console.log("Scissor beats Paper!"); }
+    p1.textContent = "Scissor beats Paper!"; }
 }
 else if(computerchoice == "scissor"){
     if (humanchoice == "paper"){
         com+=1;
-        console.log("Scissor beats paper!");
+        p1.textContent = "Scissor beats paper!";
     }
     else{
     hu+=1;
-    console.log("Rock beats scissor!");}
+    p1.textContent = "Rock beats scissor!";}
 }
 if(com>hu){
-    console.log("Computer wins");
+    p2.textContent="Computer wins";
 }
 else
-console.log("Humman wins!");
+p2.textContent="Humman wins!";
 }
-for(let i = 0;i<6;i++){
+
+function main1(){
+
 let hu1 = gethumanchoice();
 let com1 = getcomputerchoice();
 
