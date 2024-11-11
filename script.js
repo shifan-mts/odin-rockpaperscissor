@@ -51,7 +51,8 @@ if(com>hu){
 else
 console.log("Humman wins!");
 }
-const hu1 = gethumanchoice();
-const com1 = getcomputerchoice();
+for(let i = 0;i<6;i++){
+let hu1 = gethumanchoice();
+let com1 = getcomputerchoice();
 
-playround(com1,hu1);
+playround(com1,hu1);}
